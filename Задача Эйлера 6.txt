@@ -1,0 +1,19 @@
+<script>
+
+let summaChisel = 0;
+let summaKvadratov = 0;
+let kvadratSummi = 0;
+let i = 0;
+
+for (i = 1; i <= 100; i++)
+{
+summaChisel = summaChisel + i; //Сумма чисел
+}
+kvadratSummi = Math.pow(summaChisel, 2); //Квадрат суммы
+for (i = 1; i <= 100; i++)
+{
+summaKvadratov = summaKvadratov + Math.pow(i, 2); //Сумма квадратов
+}
+alert(kvadratSummi - summaKvadratov); //Разность между суммой квадратов и квадратов суммы
+
+</script>
