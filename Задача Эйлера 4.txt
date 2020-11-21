@@ -1,0 +1,25 @@
+<script>
+let res1;
+let max = 0;
+for(let num1 = 999; num1 > 99; num1--)
+{
+  for(let num2 = 999; num2 > 99; num2--) //Перебираем трехзначные числа
+  {
+    res1 = num1*num2; //Произведение чисел
+    let one = res1 % 10;
+    let del1 = Math.floor(res1/10);  //Разбиваем произведение на отдельные числа
+    let two = del1 % 10;
+    let del2 = Math.floor(del1/10);
+    let three = del2 % 10;
+    let del3 = Math.floor(del2/10);
+    let four = del3 % 10;
+    let del4 = Math.floor(del3/10);
+    let five = del4 % 10;
+    let del5 = Math.floor(del4/10);
+    let six = del5 % 10;
+    if((one==six) && (two == five) &&            //Если крайние числа равны
+    (three == four) && (max < res1)) max = res1; //И максимальный палиндром меньше чем тот, который сейчас перебирается, то он заменяется им
+  }
+}
+alert(max);
+</script>
